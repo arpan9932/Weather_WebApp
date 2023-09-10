@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather_webapp</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand"><h6>weather</h6></a>
+        <form class="d-flex" role="search">
+          <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="vh-100" style="background-color: #4B515D;">
+      <div class="container py-5 h-100">
+
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-md-50 col-lg-60 col-xl-50">
+
+            <div class="card" style="color: #4B515D; border-radius: 35px;">
+              <div class="card-body p-4">
+
+                <div class="d-flex">
+                  <h6 class="flex-grow-1" id="cityName"></h6>
+                  <h5 id="hour">15</h5>:<h5 id="min">00</h5>
+                </div>
+
+                <div class="d-flex flex-column text-center mt-5 mb-4">
+                  <h6 class="display-4 mb-0 font-weight-bold" style="color: #000613;"><span
+                      id="temp">0</span><sup>°C</sup></h6>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="flex-grow-1" style="font-size: 1rem;">
+                    <div><i class="fas fa-wind fa-fw" style="color: #00040a;"></i>Feels-like : <span class="ms-1"
+                        id="feels_like">0
+                      </span> <sup>°C</sup></div>
+                    <div><i class="fas fa-tint fa-fw" style="color: #000103;"></i>Humidity : <span class="ms-1"
+                        id="humidity">0</span><span>%</span>
+                    </div>
+                    <div><i class="fas fa-sun fa-fw" style="color: #000308;"></i> Wind-speed : <span class="ms-1"
+                        id="wind_speed">0</span><span> Km/h</span>
+                    </div>
+                    <div><i class="fas fa-sun fa-fw" style="color: #000307;"></i> Cloud-cover : <span class="ms-1"
+                        id="cloud_pct">0</span><span>%</span>
+                    </div>
+                    <div><i class="fas fa-sun fa-fw" style="color: #000308;"></i> Max-temparature : <span class="ms-1"
+                        id="max_temp"> 0</span><sup>°C</sup>
+                    </div>
+                    <div><i class="fas fa-sun fa-fw" style="color: #000307;"></i> Min-temparature : <span class="ms-1"
+                        id="min_temp"> 0</span><sup>°C</sup>
+                    </div>
+                    <div><i class="fas fa-sun fa-fw" style="color: #000206;"></i>wind_degree : <span class="ms-1"
+                        id="wind_degrees"> 0</span><sup>°</sup>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
