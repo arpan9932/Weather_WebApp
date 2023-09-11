@@ -13,7 +13,9 @@
   <header>
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand"><h6>weather</h6></a>
+        <a class="navbar-brand">
+          <h6>weather</h6>
+        </a>
         <form class="d-flex" role="search">
           <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
@@ -38,7 +40,8 @@
 
                 <div class="d-flex flex-column text-center mt-5 mb-4">
                   <h6 class="display-4 mb-0 font-weight-bold" style="color: #000613;"><span
-                      id="temp">0</span><sup>°C</sup></h6>
+                      id="temp"> 0</span><sup>°C</sup></h6>
+                  <span class="s" id="condition">Stormy</span>
                 </div>
                 <div class="d-flex align-items-center">
                   <div class="flex-grow-1" style="font-size: 1rem;">
@@ -48,21 +51,25 @@
                     <div><i class="fas fa-tint fa-fw" style="color: #000103;"></i>Humidity : <span class="ms-1"
                         id="humidity">0</span><span>%</span>
                     </div>
-                    <div><i class="fas fa-sun fa-fw" style="color: #000308;"></i> Wind-speed : <span class="ms-1"
-                        id="wind_speed">0</span><span> Km/h</span>
-                    </div>
                     <div><i class="fas fa-sun fa-fw" style="color: #000307;"></i> Cloud-cover : <span class="ms-1"
                         id="cloud_pct">0</span><span>%</span>
                     </div>
-                    <div><i class="fas fa-sun fa-fw" style="color: #000308;"></i> Max-temparature : <span class="ms-1"
-                        id="max_temp"> 0</span><sup>°C</sup>
+                    <div><i class="fas fa-sun fa-fw" style="color: #000308;"></i> Pressure : <span class="ms-1"
+                        id="pressure">0</span> mb
                     </div>
-                    <div><i class="fas fa-sun fa-fw" style="color: #000307;"></i> Min-temparature : <span class="ms-1"
-                        id="min_temp"> 0</span><sup>°C</sup>
+                    <div><i class="fas fa-sun fa-fw" style="color: #000308;"></i> Wind-speed : <span class="ms-1"
+                        id="wind_speed">0</span><span> Km/h</span>
+                    </div>
+                    <div><i class="fas fa-sun fa-fw" style="color: #000307;"></i> Wind Direction : <span class="ms-1"
+                        id="wind_dir">0</span>
                     </div>
                     <div><i class="fas fa-sun fa-fw" style="color: #000206;"></i>wind_degree : <span class="ms-1"
                         id="wind_degrees"> 0</span><sup>°</sup>
                     </div>
+                  </div>
+                  <div >
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"  class="weather-img"
+                      width="100px">
                   </div>
                 </div>
               </div>

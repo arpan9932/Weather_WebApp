@@ -2,23 +2,26 @@ const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': 'eb77b9204fmsh5799a5ed801d84bp19d802jsn841e27ed1cc1',
-		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+		'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
 	}
 };
+const weather_img = document.querySelector('.weather-img');
 const getWeather=(city)=>{
 	cityName.innerHTML=city;
-fetch( 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city='+city,options)
+fetch( 'https://weatherapi-com.p.rapidapi.com/current.json?q='+city,options)
     .then(Response=>Response.json())
     .then(Response=>{
 		console.log(Response)
-		cloud_pct.innerHTML=Response.cloud_pct
-        temp.innerHTML=Response.temp
-        feels_like.innerHTML=Response.feels_like
-        humidity.innerHTML=Response.humidity
-        min_temp.innerHTML=Response.min_temp
-        max_temp.innerHTML=Response.max_temp
-        wind_speed.innerHTML=Response.wind_speed
-        wind_degrees.innerHTML=Response.wind_degrees
+		    cloud_pct.innerHTML=Response.current.cloud
+        temp.innerHTML=Response.current.temp_c
+        feels_like.innerHTML=Response.current.feelslike_c
+        humidity.innerHTML=Response.current.humidity
+        wind_dir.innerHTML=Response.current.wind_dir
+        pressure.innerHTML=Response.current.pressure_mb
+        wind_speed.innerHTML=Response.current.wind_kph
+        wind_degrees.innerHTML=Response.current.wind_degree
+        condition.innerHTML=Response.current.condition.text
+        weather_img.src=Response.current.condition.icon
 	})
     .catch(err=>console.error(err))
 }
